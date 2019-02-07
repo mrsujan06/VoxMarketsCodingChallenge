@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Vox Markets Coding Challenge</string>
+    <string name="some_error">There is an Issue</string>
+    <string name="exchange_name">Exchange Name : </string>
+    <string name="exchange_fact_set_code">Exchange Fact Set Code : </string>
+
+</resources>
