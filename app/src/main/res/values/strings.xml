@@ -3,5 +3,8 @@
     <string name="some_error">There is an Issue</string>
     <string name="exchange_name">Exchange Name : </string>
     <string name="exchange_fact_set_code">Exchange Fact Set Code : </string>
+    <string name="date_created">Created At : </string>
 
+    <string name="sort_by_exchange_name">Sort By Exchange Name</string>
+    <string name="sort_by_createdAt">Sort By Date Created</string>
 </resources>

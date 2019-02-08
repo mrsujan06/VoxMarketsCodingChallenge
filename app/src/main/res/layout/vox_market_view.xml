@@ -20,7 +20,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/exchange_name"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,10 +33,26 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="@string/exchange_fact_set_code"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelExchangeName" />
+            app:layout_constraintTop_toBottomOf="@+id/labelExchangeName"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/labelCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/date_created"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelExchangeFactSetCode" />
 
         <TextView
             android:id="@+id/textViewExchangeName"
@@ -44,7 +61,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="TextView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             app:layout_constraintStart_toEndOf="@+id/labelExchangeName"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,9 +72,20 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="TextView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
             app:layout_constraintStart_toEndOf="@+id/labelExchangeFactSetCode"
             app:layout_constraintTop_toBottomOf="@+id/textViewExchangeName" />
+
+        <TextView
+            android:id="@+id/textViewCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            app:layout_constraintStart_toEndOf="@+id/labelCreatedAt"
+            app:layout_constraintTop_toBottomOf="@+id/textViewExchangeFactSetCode" />
 
 
     </android.support.constraint.ConstraintLayout>

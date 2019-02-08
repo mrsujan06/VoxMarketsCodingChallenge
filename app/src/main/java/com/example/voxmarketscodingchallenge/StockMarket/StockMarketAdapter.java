@@ -1,4 +1,4 @@
-package com.example.voxmarketscodingchallenge;
+package com.example.voxmarketscodingchallenge.StockMarket;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,18 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.voxmarketscodingchallenge.R;
 import com.example.voxmarketscodingchallenge.model.VoxResponse;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class VoxAdapter extends RecyclerView.Adapter<VoxAdapter.VoxAdapterViewHolder> {
+public class StockMarketAdapter extends RecyclerView.Adapter<StockMarketAdapter.VoxAdapterViewHolder> {
 
-    List<VoxResponse> mVoxResponse = new LinkedList<>();
+    private List<VoxResponse> mVoxResponse = new LinkedList<>();
 
     @Override
     public VoxAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.stock_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.vox_market_view, parent, false);
         return new VoxAdapterViewHolder(view);
     }
 
@@ -39,10 +40,11 @@ public class VoxAdapter extends RecyclerView.Adapter<VoxAdapter.VoxAdapterViewHo
     }
 
 
-    class VoxAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class VoxAdapterViewHolder extends RecyclerView.ViewHolder {
 
-        TextView exchangeName;
-        TextView exchangeFactSetCode;
+        private TextView exchangeName;
+        private TextView exchangeFactSetCode;
+        private TextView createdAt;
         VoxResponse response;
 
         public VoxAdapterViewHolder(View itemView) {
@@ -50,18 +52,15 @@ public class VoxAdapter extends RecyclerView.Adapter<VoxAdapter.VoxAdapterViewHo
 
             this.exchangeName = itemView.findViewById(R.id.textViewExchangeName);
             this.exchangeFactSetCode = itemView.findViewById(R.id.textViewExchangeFactSetCode);
-            itemView.setOnClickListener(this);
+            this.createdAt = itemView.findViewById(R.id.textViewCreatedAt);
         }
 
         void doBinding(VoxResponse response) {
             this.response = response;
             this.exchangeName.setText(response.getExchangeName());
             this.exchangeFactSetCode.setText(response.getExchangeFactSetCode());
+            this.createdAt.setText(response.getCreatedAt());
         }
 
-        @Override
-        public void onClick(View v) {
-
-        }
     }
 }

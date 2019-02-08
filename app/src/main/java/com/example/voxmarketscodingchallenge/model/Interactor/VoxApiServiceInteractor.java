@@ -7,5 +7,6 @@ import java.util.List;
 import io.reactivex.Observable;
 
 public interface VoxApiServiceInteractor {
+
     Observable<List<VoxResponse>> getData();
 }

@@ -27,7 +27,6 @@ public class VoxApiServiceInteractorImp implements VoxApiServiceInteractor {
 
     }
 
-
     @Override
     public Observable<List<VoxResponse>> getData() {
         return mVoxApiService.getData();
